@@ -34,7 +34,7 @@ for i in range(1,6):
         
         lap_detail = plink + link['href'] + '#/tab-params'
         time.sleep(0.5) #sleep for preventing too many requests
-        print(lap_detail)
+        # print(lap_detail)
         detail_req = requests.get(lap_detail)
         info['link'] = detail_req.url
         detail_soup = BeautifulSoup(detail_req.text , 'html.parser')
@@ -51,12 +51,12 @@ for i in range(1,6):
         for k , gs in enumerate(good_sectoins):    
             lis  = gs.ul.find_all('li')
             for j in range(len(lis)):
-                if k == 0 : 
-                    if j == 2 or j == 3 or j == 4 : 
-                        continue 
-                if k == 2: 
-                    if j != 0 :
-                        continue 
+                # if k == 0 : 
+                #     if j == 2 or j == 3 or j == 4 : 
+                #         continue 
+                # if k == 2: 
+                #     if j != 0 :
+                #         continue 
 
                 key = lis[j].find('div' , class_="c-params__list-key")
                 value = lis[j].find('div' , class_='c-params__list-value')
