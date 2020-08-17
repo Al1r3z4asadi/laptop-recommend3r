@@ -11,8 +11,8 @@ import get_user_input
 
 
 
-def clean_mongo_data():
-    pass
+# def clean_mongo_data():
+#     pass
 
 
 
@@ -125,19 +125,19 @@ prcessed_df = df_to_process.apply(preprocessing.LabelEncoder().fit_transform)
 processe_string = ['brand' , 'processor' , 'Graphic' , 'sprocessor']
 float_df = data.drop(processe_string , axis=1)
 concated_df = pd.concat([prcessed_df,float_df], axis=1, sort=False)
-print(concated_df)
+# print(concated_df)
 
 
 
 a = list(data['brand'])
 b = list(concated_df['brand'])
 brand_co = dict((x, y) for x, y in zip(a, b))
-print("brans are " , brand_co)
+# print("brans are " , brand_co)
 
 a = list(data['processor'])
 b = list(concated_df['processor'])
 processor_co = dict((x, y) for x, y in zip(a, b))
-print("processors are " , processor_co)
+# print("processors are " , processor_co)
 
 
 a = list(data['Graphic'])
