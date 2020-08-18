@@ -27,7 +27,7 @@ def get_processor():
 
 def get_Graphic():
     print("please enter your grahpic card model ")
-    graphics = [' Intel '  , ' NVIDIA ' , ' AMD ']
+    graphics = [' Intel '  , ' NVIDIA ' , 'AMD ']
     show(graphics)
     return graphics[int(input()) - 1]
 
