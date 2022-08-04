@@ -1,5 +1,6 @@
 
 
+
 def show(alist):
     for i , p in enumerate(alist):
         print(i+1 ,')' , p)

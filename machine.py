@@ -1,3 +1,4 @@
+
 from pymongo import MongoClient
 from mongoengine import *
 from mongo_connect import Product
@@ -26,7 +27,7 @@ mongo_client = MongoClient('localhost', 27017)
 db = mongo_client.laptops
 col = db.product
 cursor = col.find()
- 
+
 docs = []
 # mongo_docs = list(cursor)
 what_not_need = ['ظرفیت حافظه داخلی' , 'محدوده سرعت پردازنده'   , 'link' , 'فرکانس پردازنده' , 'مدل پردازنده' ,'مدل پردازنده گرافیکی' ,'نوع حافظه داخلی' , 'مشخصات حافظه داخلی' ,'نوع حافظه RAM']
@@ -57,7 +58,7 @@ for mongo_doc in read_mongo(cursor):
             key = 'GraphicM'
             value = re.search(find_values , value)
             if value == None :
-                value = 0 
+                value = 0
             else:
                 value = float(value.group())
                 if value > 16 :
@@ -79,7 +80,7 @@ for mongo_doc in read_mongo(cursor):
 
 # for mongo_doc in mongo_docs:
 #     for key , value in mongo_doc.items():
-        
+
 #         if key == 'ظرفیت حافظه داخلی':
 #             print(value)
 #             # print(mongo_doc['link'])
